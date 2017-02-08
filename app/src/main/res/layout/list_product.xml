@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent"
+    android:orientation="horizontal">
+
+    <ImageView
+                android:contentDescription="parve, meat or dairy"
+                android:id="@+id/icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+                    android:layout_height="wrap_content"
+                        android:id="@+id/txtBrand"
+                        android:text="Brand"
+                        android:layout_width="206dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtProduct"
+            android:text="Product"
+            android:layout_width="187dp"
+            android:layout_height="39dp">
+        </TextView>
+    </LinearLayout>
+        <TextView
+            android:id="@+id/txtGroup"
+            android:text="Group"
+            android:textDirection="rtl"
+            android:layout_height="57dp"
+            android:layout_width="67dp">
+        </TextView>
+    </LinearLayout>
+
