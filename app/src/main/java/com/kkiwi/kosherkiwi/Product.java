@@ -28,7 +28,7 @@ public class Product implements Comparable<Product> {
             subGroup = productDetails[1];
             brand = productDetails[2];
             productName = productDetails[3];
-            setIconType(productDetails[4]);
+            setIconType(productDetails[0]);
             logo = productDetails[5];
             comment = productDetails[6];
             updated = productDetails[7];
@@ -47,20 +47,93 @@ public class Product implements Comparable<Product> {
     }
 
     public void setIconType(String s){
-        switch(s.charAt(0)){
-            case 'p':
-            case 'P':
-                iconType=R.drawable.parve;
+        switch(s){
+            case "Alcohol":
+                iconType=R.drawable.alcohol;
                 break;
-            case 'D':
-            case 'd':
-                iconType=R.drawable.milk;
+            case "Baby Foods":
+                iconType=R.drawable.baby_foods;
                 break;
-            case 'F':
-            case 'f':
-            case 'm':
-            case 'M':
+            case "Baby Formula":
+                iconType=R.drawable.baby_formula;
+                break;
+            case "Baking Ingredients":
+                iconType=R.drawable.baking_ingredients;
+                break;
+            case "Cereals":
+                iconType=R.drawable.cereals;
+                break;
+            case "Chips, Snacks, Nuts and Dips":
+                iconType=R.drawable.snacks;
+                break;
+            case "Confectionary":
+                iconType=R.drawable.confectionary;
+                break;
+            case "Custard Powder":
+                iconType=R.drawable.custard;
+                break;
+            case "Dairy Products":
+                iconType=R.drawable.dairy;
+                break;
+            case "Fish":
+                iconType=R.drawable.fish;
+                break;
+            case "Fruit":
+                iconType=R.drawable.fruit;
+                break;
+            case "Gluten Free":
+                iconType=R.drawable.gluten_free;
+                break;
+            case "Gravy Mixes":
+                iconType=R.drawable.gravy;
+                break;
+            case "Health bars, Supplements & Vitamins":
+                iconType=R.drawable.health;
+                break;
+            case "Jams, Conserves & Marmalades":
+                iconType=R.drawable.jam;
+                break;
+            case "Juices and Cordials":
+                iconType=R.drawable.juice;
+                break;
+            case "Mayonnaise & Dressings":
+                iconType=R.drawable.sauce;
+                break;
+            case "Meat Substitutes":
                 iconType=R.drawable.meat;
+                break;
+            case "Medical":
+                iconType=R.drawable.medicine;
+                break;
+            case "Milk Products":
+                iconType=R.drawable.dairy;
+                break;
+            case "Mustards":
+                iconType=R.drawable.mustard;
+                break;
+            case "Oil & Oil Sprays":
+                iconType=R.drawable.oil;
+                break;
+            case "Pasta, Rice and Pulses":
+                iconType=R.drawable.pasta;
+                break;
+            case "Pastry":
+                iconType=R.drawable.pastry;
+                break;
+            case "Pickles & Relishes":
+                iconType=R.drawable.pickles;
+                break;
+            case "Puddings - Instant":
+                iconType=R.drawable.pudding;
+                break;
+            case "Salt & Salt Substitutes":
+                iconType=R.drawable.salt;
+                break;
+            case "Sauces & Marinades":
+                iconType=R.drawable.marinade;
+                break;
+            case "Soups":
+                iconType=R.drawable.soup;
                 break;
             default:
                 iconType=R.drawable.parve;
