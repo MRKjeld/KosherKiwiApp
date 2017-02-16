@@ -48,6 +48,11 @@ public class Product implements Comparable<Product> {
 
     public void setIconType(String s){
         switch(s){
+            /*
+            need to:
+            1) get better low res images.
+            2) assign all of the groups in here. So far it's missing a fair bit.
+             */
             case "Alcohol":
                 iconType=R.drawable.alcohol;
                 break;
