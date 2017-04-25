@@ -1,13 +1,12 @@
 package com.kkiwi.kosherkiwi;
 
+import android.graphics.drawable.Drawable;
+import android.media.ImageReader;
+import android.text.Html;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
-/**
- * Created by Alleras on 11/30/2016.
- */
-
-//removed guideline.
 
 public class Product implements Comparable<Product> {
 
@@ -46,12 +45,13 @@ public class Product implements Comparable<Product> {
         return subGroup;
     }
 
-    public void setIconType(String s){
+    private void setIconType(String s){
         switch(s){
             /*
             need to:
             1) get better low res images.
             2) assign all of the groups in here. So far it's missing a fair bit.
+            3) even better than the above two, consider getting groups/images from another source.
              */
             case "Alcohol":
                 iconType=R.drawable.alcohol;
@@ -160,7 +160,7 @@ public class Product implements Comparable<Product> {
     }
 
 
-    public String getFilterDetail(){
+    private String getFilterDetail(){
         String s = "";
         switch(DataReader.filterByCategory){
             case PRODUCT:

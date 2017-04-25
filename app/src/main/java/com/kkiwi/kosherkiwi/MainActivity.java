@@ -13,11 +13,6 @@ import java.io.IOException;
 
 import static com.kkiwi.kosherkiwi.R.layout.activity_main;
 
-/**
- * Created by Alleras on 11/15/2016.
- */
-
-
 
 public class MainActivity extends Activity {
 
@@ -38,6 +33,16 @@ public class MainActivity extends Activity {
         }
         useSearchFilter();
         generateList();
+
+    }
+
+
+    public void onResume(){
+        super.onResume();
+        try{DataReader dr = new DataReader(getApplicationContext());}
+        catch(Exception e){
+            System.out.println(e.toString());
+        }
     }
 
     public void generateList(){
@@ -49,7 +54,6 @@ public class MainActivity extends Activity {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                //to be done for when an item is clicked.
                 Intent intent = new Intent(context, ProductActivity.class);
                 intent.putExtra("productIndex", i);
                 startActivity(intent);

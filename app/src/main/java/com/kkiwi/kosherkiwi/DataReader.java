@@ -10,10 +10,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-/**
- * Created by Alleras on 11/30/2016.
- */
-
 public class DataReader {
 
     public static ArrayList<Product> productList = new ArrayList<>();
@@ -22,23 +18,18 @@ public class DataReader {
     public static FilterByCategory filterByCategory = FilterByCategory.PRODUCT;
 
     public enum FilterByCategory{
-        PRODUCT, GROUP, BRAND;
+        PRODUCT, GROUP, BRAND
     }
 
     private String csvSplitBy = ",";
 
-
     public DataReader(Context context) throws IOException {
-        System.out.println("TEST1");
         AssetManager assetManager = context.getAssets();
-        System.out.println("RETRIEVED ASSETS");
         BufferedReader br = new BufferedReader(new InputStreamReader(assetManager.open("kosher_list.csv")));
-        System.out.println("ACCESSED ASSETS");
-        String line ="";
+        String line = "";
         boolean firstLine = true;
 
         while((line=br.readLine())!=null){
-            System.out.println("TEST");
 
             if(firstLine){
                 firstLine=false;
@@ -48,7 +39,6 @@ public class DataReader {
             productDetails = line.split(csvSplitBy);
 
             if(productDetails[2].isEmpty()){
-                System.out.println("Not adding this.");
                 continue;
             }
 //            if(productDetails[8].toLowerCase()=="guideline"){
@@ -63,8 +53,6 @@ public class DataReader {
             Product p = new Product(productDetails);
             productList.add(p);
         }
-        System.out.println("THE LAST ENTRY OF FILTERED IS: " +filteredProductList.get(filteredProductList.size()));
-        System.out.println("THE LAST ENTRY OF PRODUCT IS: " +productList.get(productList.size()));
         filteredProductList.addAll(productList);
         br.close();
     }
